@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white"
+    tools:context=".tables.feed.fragments.AddFeed">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="1dp">
+
+
+        <LinearLayout
+            android:id="@+id/llAddFeedHeader_AddFeedForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/ibBack_AddFeedForm"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@color/green"
+                android:elevation="25dp"
+                android:src="@drawable/ic_back" />
+
+            <TextView
+                android:id="@+id/tvHeaderInfo_AddFeedForm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_weight="8"
+                android:background="@drawable/header_background"
+                android:elevation="25dp"
+                android:padding="5dp"
+                android:text="Add Feed"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/ibInfo_AddFeedForm"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@color/green"
+                android:elevation="25dp"
+                android:src="@drawable/ic_information" />
+
+
+        </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvFeedName_AddFeedForm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter the name of feed  "
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="@id/etFeedName_AddFeedForm"
+        app:layout_constraintTop_toBottomOf="@id/llAddFeedHeader_AddFeedForm" />
+
+
+    <EditText
+        android:id="@+id/etFeedName_AddFeedForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/big_edit_text_background"
+        android:paddingStart="20dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFeedName_AddFeedForm" />
+
+    <TextView
+        android:id="@+id/tvFeedType_AddFeedForm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter the type of feed  "
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="@id/etFeedType_AddFeedForm"
+        app:layout_constraintTop_toBottomOf="@id/etFeedName_AddFeedForm" />
+
+    <EditText
+        android:id="@+id/etFeedType_AddFeedForm"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/big_edit_text_background"
+        android:inputType="text"
+        android:paddingStart="20dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFeedType_AddFeedForm" />
+
+    <TextView
+        android:id="@+id/tvFeedBrand_AddFeedForm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter the brand of feed  "
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="@id/etFeedBrand_AddFeedForm"
+        app:layout_constraintTop_toBottomOf="@id/etFeedType_AddFeedForm" />
+
+    <EditText
+        android:id="@+id/etFeedBrand_AddFeedForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:inputType="text"
+        android:background="@drawable/big_edit_text_background"
+        android:paddingStart="20dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFeedBrand_AddFeedForm" />
+
+
+    <TextView
+        android:id="@+id/tvFeedSource_AddFeedForm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter the source of feed  "
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="@id/etFeedBrand_AddFeedForm"
+        app:layout_constraintTop_toBottomOf="@id/etFeedBrand_AddFeedForm" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/spFeedSource_AddFeedForm"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tvFeedSource_AddFeedForm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+            android:id="@+id/actvFeedSource_AddFeedForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="text"
+            android:background="@drawable/big_edit_text_background"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:paddingStart="15dp"
+            android:paddingBottom="2dp"
+            android:paddingEnd="2dp"
+            android:paddingTop="1dp">
+            <requestFocus />
+        </androidx.appcompat.widget.AppCompatAutoCompleteTextView>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <EditText
+        android:id="@+id/etShortNotes_AddFeedForm"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/big_edit_text_background"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="write short notes"
+        android:inputType="textMultiLine"
+        android:textColor="@color/black"
+        android:paddingStart="15dp"
+        android:paddingTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spFeedSource_AddFeedForm" />
+
+
+    <Button
+        android:id="@+id/btnSave_AddFeedForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/big_button_background"
+        android:text="Save"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/etShortNotes_AddFeedForm"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

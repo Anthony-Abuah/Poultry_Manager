@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/clReminderList"
+    android:background="@drawable/recycler_view_background"
+    android:layout_margin="6dp"
+    android:padding="16dp">
+
+
+    <ImageView
+        android:id="@+id/ivReminderImage_ReminderLayout"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="4dp"
+        android:src="@drawable/reminder"
+        app:layout_constraintTop_toTopOf="@id/tvReminderTitle_ReminderLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/tvReminderFrequency_ReminderLayout" />
+
+    <TextView
+        android:id="@+id/tvReminderTitle_ReminderLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="Reminder Title"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@id/ivReminderImage_ReminderLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tvReminderDate_ReminderLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="Date"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@id/ivReminderImage_ReminderLayout"
+        app:layout_constraintTop_toBottomOf="@id/tvReminderTitle_ReminderLayout"
+        />
+
+        <TextView
+        android:id="@+id/tvReminderTime_ReminderLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="Time "
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@id/ivReminderImage_ReminderLayout"
+        app:layout_constraintTop_toBottomOf="@id/tvReminderDate_ReminderLayout"
+        />
+
+         <TextView
+        android:id="@+id/tvReminderFrequency_ReminderLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="Frequency"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@id/ivReminderImage_ReminderLayout"
+        app:layout_constraintTop_toBottomOf="@id/tvReminderTime_ReminderLayout"
+        />
+
+
+
+
+    <ImageView
+        android:id="@+id/ivEdit_Delete_Menu_ReminderLayout"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="5dp"
+        android:src="@drawable/ic_more"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

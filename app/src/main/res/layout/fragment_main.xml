@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainFragment">
+
+    <ImageView
+        android:id="@+id/ivAppLogo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/flock"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvAppTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:text="Poultry Manager "
+        android:textColor="@color/light_black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivAppLogo" />
+
+    <TextView
+        android:id="@+id/tvAppTitleInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:text="Welcome to Poultry Manager. Let's get started"
+        android:textColor="@color/light_black"
+        android:textSize="16sp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAppTitle" />
+
+    <ScrollView
+        android:id="@+id/svMenus_MainFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAppTitleInfo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_editor_absoluteX="0dp">
+
+        <LinearLayout
+            android:id="@+id/llMenus_MainFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvInventory_MainFragment"
+            android:layout_width="0dp"
+            android:layout_height="130dp"
+            android:layout_weight="1"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/background_white"
+            app:cardElevation="5dp">
+
+            <LinearLayout
+                android:id="@+id/llInventory_MainFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ivInventory_MainFragment"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/inventory"
+                    />
+
+                <TextView
+                    android:id="@+id/tvInventory_MainFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:text="Inventory"
+                    android:textColor="@color/light_black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvTransactions_MainFragment"
+            android:layout_width="0dp"
+            android:layout_height="130dp"
+            android:layout_weight="1"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/background_white"
+            app:cardElevation="5dp">
+
+            <LinearLayout
+                android:id="@+id/llTransactions_MainFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="0dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ivTransactions_MainFragment"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/transaction"
+                    />
+
+                <TextView
+                    android:id="@+id/tvTransactions_MainFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:text="Transactions"
+                    android:textColor="@color/light_black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            >
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvHealth_MainFragment"
+            android:layout_width="0dp"
+            android:layout_height="130dp"
+            android:layout_weight="1"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/background_white"
+            app:cardElevation="5dp">
+
+            <LinearLayout
+                android:id="@+id/llHealth_MainFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="0dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ivHealth_MainFragment"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/health"
+                    />
+
+                <TextView
+                    android:id="@+id/tvHealth_MainFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:text="Health"
+                    android:textColor="@color/light_black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvTables_MainFragment"
+            android:layout_width="0dp"
+            android:layout_height="130dp"
+            android:layout_weight="1"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/background_white"
+            app:cardElevation="5dp">
+
+            <LinearLayout
+                android:id="@+id/llTables_MainFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="0dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ivTables_MainFragment"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/tables"
+                    />
+
+                <TextView
+                    android:id="@+id/tvTables_MainFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:text="Tables"
+                    android:textColor="@color/light_black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvReport_MainFragment"
+            android:layout_width="0dp"
+            android:layout_height="130dp"
+            android:layout_weight="1"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/background_white"
+            app:cardElevation="5dp">
+
+            <LinearLayout
+                android:id="@+id/llReport_MainFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="0dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ivReport_MainFragment"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/report"
+                    />
+
+                <TextView
+                    android:id="@+id/tvReport_MainFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:text="Report"
+                    android:textColor="@color/light_black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvBudget_MainFragment"
+            android:layout_width="0dp"
+            android:layout_height="130dp"
+            android:layout_weight="1"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/background_white"
+            app:cardElevation="5dp">
+
+            <LinearLayout
+                android:id="@+id/llBudget_MainFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="0dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ivBudget_MainFragment"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/budget"
+                    />
+
+                <TextView
+                    android:id="@+id/tvBudget_MainFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:text="Budget"
+                    android:textColor="@color/light_black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

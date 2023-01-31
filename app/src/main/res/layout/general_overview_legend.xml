@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clLegendContainer_GeneralOverviewLegend"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="2dp"
+    android:background="@color/background_white">
+
+
+    <View
+        android:id="@+id/vLegendBox_GeneralOverviewLegend"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_margin="4dp"
+        android:background="@color/blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/tvLegendTitle_GeneralOverviewLegend"
+        app:layout_constraintTop_toTopOf="@+id/tvLegendTitle_GeneralOverviewLegend"/>
+
+    <TextView
+        android:id="@+id/tvLegendTitle_GeneralOverviewLegend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="8dp"
+        android:textSize="14sp"
+        tools:text="xxxxjdsfjsdfj"
+        android:layout_marginStart="3dp"
+        app:layout_constraintStart_toEndOf="@+id/vLegendBox_GeneralOverviewLegend"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvLegendValue_GeneralOverviewLegend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:textSize="14sp"
+        tools:text="xxxxjdsfjsdfj"
+        android:layout_marginStart="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

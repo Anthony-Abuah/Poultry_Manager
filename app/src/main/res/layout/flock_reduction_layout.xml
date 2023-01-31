@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="15dp"
+    app:cardBackgroundColor="@color/background_white"
+    android:layout_margin="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp">
+
+    <ImageView
+        android:id="@+id/ivFlockReductionImage_FlockReductionLayout"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/recycler_view_image"
+        android:elevation="5dp"
+        android:layout_marginStart="4dp"
+        android:src="@drawable/flock"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tvFlockReductionDate_FlockReductionLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:elevation="25dp"
+        android:text="Reduced on 22-10-2022"
+        android:textColor="@color/light_black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tvFlockName_FlockReductionLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:elevation="25dp"
+        android:text="January 2022 flock"
+        android:textColor="@color/main_green"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/ivFlockReductionImage_FlockReductionLayout"
+        app:layout_constraintTop_toBottomOf="@id/tvFlockReductionDate_FlockReductionLayout" />
+
+
+    <TextView
+        android:id="@+id/tvFlockQuantity_FlockReductionLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="8dp"
+        android:elevation="25dp"
+        android:text="500 birds"
+        android:textColor="@color/light_black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/ivFlockReductionImage_FlockReductionLayout"
+        app:layout_constraintTop_toBottomOf="@id/tvFlockName_FlockReductionLayout" />
+
+    <TextView
+        android:id="@+id/tvReductionReason_FlockReductionLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="8dp"
+        android:elevation="25dp"
+        android:text="Sold to Aunty Mary"
+        android:textColor="@color/light_black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/ivFlockReductionImage_FlockReductionLayout"
+        app:layout_constraintTop_toBottomOf="@id/tvFlockQuantity_FlockReductionLayout" />
+
+    <TextView
+        android:id="@+id/tvSalesInfo_FlockReductionLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="8dp"
+        android:elevation="25dp"
+        android:text="Amount Paid"
+        android:textColor="@color/light_black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/ivFlockReductionImage_FlockReductionLayout"
+        app:layout_constraintTop_toBottomOf="@id/tvReductionReason_FlockReductionLayout" />
+
+
+    <ImageView
+        android:id="@+id/ivUpdate_Delete_Menu_FlockReductionLayout"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="5dp"
+        android:elevation="25dp"
+        android:src="@drawable/ic_more"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

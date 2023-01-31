@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white"
+    tools:context=".reminder.fragments.AddReminder">
+
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp">
+
+
+        <LinearLayout
+            android:id="@+id/llAddReminderHeader_AddReminderForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/ibBack_AddReminderForm"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@color/green"
+                android:elevation="25dp"
+                android:src="@drawable/ic_back" />
+
+            <TextView
+                android:id="@+id/tvHeaderInfo_AddReminderForm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_weight="8"
+                android:background="@drawable/header_background"
+                android:elevation="25dp"
+                android:padding="5dp"
+                android:text="Add Reminder"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/ibInfo_AddReminderForm"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@color/green"
+                android:elevation="25dp"
+                android:src="@drawable/ic_information" />
+
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llReminderTitle_ReminderActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="16dp"
+        android:background="@drawable/big_edit_text_background"
+        app:layout_constraintTop_toBottomOf="@id/llAddReminderHeader_AddReminderForm"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/tvReminderTitle_ReminderActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Reminder Title"
+            android:textColor="@color/green"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"/>
+
+
+        <EditText
+            android:id="@+id/etReminderTitle_ReminderActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Reminder Title"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:padding="5dp"
+            android:paddingStart="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/underline_edit_text"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llReminder_ReminderActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="16dp"
+        android:background="@drawable/big_edit_text_background"
+        app:layout_constraintTop_toBottomOf="@id/llReminderTitle_ReminderActivity"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/tvReminder_ReminderActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Reminder "
+            android:textColor="@color/green"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"/>
+
+        <EditText
+            android:id="@+id/etReminder_ReminderActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your reminder"
+            android:textSize="24sp"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:inputType="textMultiLine"
+            android:paddingStart="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/underline_edit_text"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llReminderDate_ReminderActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="16dp"
+        android:background="@drawable/big_edit_text_background"
+        app:layout_constraintTop_toBottomOf="@id/llReminder_ReminderActivity"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/tvReminderDateInfo_ReminderActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Reminder Date"
+            android:textColor="@color/green"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"/>
+
+        <TextView
+            android:id="@+id/tvReminderDate_ReminderActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select Date"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:padding="5dp"
+            android:paddingStart="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/underline_edit_text"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llReminderTime_ReminderActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="16dp"
+        android:background="@drawable/big_edit_text_background"
+        app:layout_constraintTop_toBottomOf="@id/llReminderDate_ReminderActivity"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/tvReminderTimeInfo_ReminderActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Reminder Time"
+            android:textColor="@color/green"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"/>
+
+        <TextView
+            android:id="@+id/tvReminderTime_ReminderActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select Time"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:padding="5dp"
+            android:paddingStart="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/underline_edit_text"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/llSelectFrequency_ReminderActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="16dp"
+        android:background="@drawable/big_edit_text_background"
+        app:layout_constraintTop_toBottomOf="@id/llReminderTime_ReminderActivity"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/tvSelectFrequency_ReminderActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Repeat"
+            android:textColor="@color/green"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/spSelectFrequency_ReminderActivity"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/actvSelectFrequency_ReminderActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:text="Daily"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                android:paddingBottom="2dp"
+                android:paddingEnd="2dp"
+                android:paddingStart="0dp"
+                android:paddingTop="1dp"
+                android:background="@drawable/underline_edit_text"
+                >
+                <requestFocus />
+            </AutoCompleteTextView>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSetReminder_ReminderActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Set Reminder"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/header_background"
+        app:layout_constraintTop_toBottomOf="@id/llSelectFrequency_ReminderActivity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

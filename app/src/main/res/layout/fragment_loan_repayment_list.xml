@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white"
+    tools:context=".transactions.cash_out.loan_repayment.fragments.LoanRepaymentList">
+
+    <LinearLayout
+        android:id="@+id/llLoanRepaymentHeader_LoanRepaymentList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/ibBack_LoanRepaymentList"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="2dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_back"
+            android:background="@color/green"
+            android:elevation="25dp"
+            />
+
+        <TextView
+            android:id="@+id/tvHeaderInfo_LoanRepaymentList"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_weight="8"
+            android:elevation="25dp"
+            android:padding="5dp"
+            android:text="Loan Repayment"
+            android:textColor="@color/white"
+            android:background="@drawable/header_background"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/ibDateFilter_LoanRepaymentList"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:layout_gravity="center"
+            android:src="@drawable/image_button_background"
+            android:background="@color/green"
+            android:elevation="25dp"
+            />
+
+        <ImageButton
+            android:id="@+id/ibPDF_LoanRepaymentList"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_pdf"
+            android:background="@color/green"
+            android:elevation="25dp"
+            />
+
+        <ImageButton
+            android:id="@+id/ibFilterAttributes_LoanRepaymentList"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="5dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_filter"
+            android:background="@color/green"
+            android:elevation="25dp"
+            />
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvLoanRepaymentList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llLoanRepaymentHeader_LoanRepaymentList"
+        app:layout_constraintVertical_bias="1.0"
+        tools:listitem="@layout/expenses_layout"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddLoanRepayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

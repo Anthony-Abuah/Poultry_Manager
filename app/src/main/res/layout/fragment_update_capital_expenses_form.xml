@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white"
+    tools:context=".transactions.cash_out.capital_expenses.fragments.UpdateCapitalExpensesForm">
+
+    <LinearLayout
+        android:id="@+id/llUpdateCapitalExpensesHeader_UpdateCapitalExpensesForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/ibBack_UpdateCapitalExpensesForm"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="@color/green"
+            android:elevation="25dp"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/tvHeaderInfo_UpdateCapitalExpensesForm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_weight="8"
+            android:background="@drawable/header_background"
+            android:elevation="25dp"
+            android:padding="5dp"
+            android:text="Add Capital Expenses"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/ibInfo_UpdateCapitalExpensesForm"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="@color/green"
+            android:elevation="25dp"
+            android:src="@drawable/ic_information" />
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llUpdateCapitalExpensesHeader_UpdateCapitalExpensesForm">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp">
+
+
+            <TextView
+                android:id="@+id/tvEnterDate_UpdateCapitalExpensesForm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="16dp"
+                android:text="Enter the date"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/tvDatePicker_UpdateCapitalExpensesForm"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvDatePicker_UpdateCapitalExpensesForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/big_edit_text_background"
+                android:hint="Enter Date"
+                android:padding="5dp"
+                android:paddingStart="15dp"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvEnterDate_UpdateCapitalExpensesForm" />
+
+
+            <TextView
+                android:id="@+id/tvSelectExpenses_UpdateCapitalExpensesForm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:drawableEnd="@drawable/ic_info"
+                android:text="Select the type of expense         "
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/spSelectExpenses_UpdateCapitalExpensesForm"
+                app:layout_constraintTop_toBottomOf="@id/tvDatePicker_UpdateCapitalExpensesForm" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/spSelectExpenses_UpdateCapitalExpensesForm"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSelectExpenses_UpdateCapitalExpensesForm">
+
+                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                    android:id="@+id/actvSelectExpenses_UpdateCapitalExpensesForm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/big_edit_text_background"
+                    android:inputType="text"
+                    android:paddingStart="15dp"
+                    android:paddingTop="1dp"
+                    android:paddingEnd="2dp"
+                    android:paddingBottom="2dp"
+                    android:textColor="@color/black"
+                    android:textSize="20sp">
+
+                    <requestFocus />
+                </androidx.appcompat.widget.AppCompatAutoCompleteTextView>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvExpenseAmount_UpdateCapitalExpensesForm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="Enter expense Amount"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/etExpenseAmount_UpdateCapitalExpensesForm"
+                app:layout_constraintTop_toBottomOf="@id/spSelectExpenses_UpdateCapitalExpensesForm" />
+
+
+            <EditText
+                android:id="@+id/etExpenseAmount_UpdateCapitalExpensesForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/big_edit_text_background"
+                android:drawableEnd="@drawable/ic_info"
+                android:inputType="numberDecimal"
+                android:padding="5dp"
+                android:paddingStart="15dp"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvExpenseAmount_UpdateCapitalExpensesForm" />
+
+
+            <TextView
+                android:id="@+id/tvSelectPaymentMethod_UpdateCapitalExpensesForm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:drawableEnd="@drawable/ic_info"
+                android:text="Select payment method         "
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/spSelectPaymentMethod_UpdateCapitalExpensesForm"
+                app:layout_constraintTop_toBottomOf="@id/etExpenseAmount_UpdateCapitalExpensesForm" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/spSelectPaymentMethod_UpdateCapitalExpensesForm"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_weight="7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSelectPaymentMethod_UpdateCapitalExpensesForm">
+
+                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                    android:id="@+id/actvSelectPaymentMethod_UpdateCapitalExpensesForm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/big_edit_text_background"
+                    android:inputType="text"
+                    android:paddingStart="15dp"
+                    android:paddingTop="1dp"
+                    android:paddingEnd="2dp"
+                    android:paddingBottom="2dp"
+                    android:textColor="@color/black"
+                    android:textSize="20sp">
+
+                    <requestFocus />
+                </androidx.appcompat.widget.AppCompatAutoCompleteTextView>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/tvTransactionID_UpdateCapitalExpensesForm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="Enter Transaction ID"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/etTransactionID_UpdateCapitalExpensesForm"
+                app:layout_constraintTop_toBottomOf="@id/spSelectPaymentMethod_UpdateCapitalExpensesForm" />
+
+
+            <EditText
+                android:id="@+id/etTransactionID_UpdateCapitalExpensesForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/big_edit_text_background"
+                android:drawableEnd="@drawable/ic_info"
+                android:inputType="numberDecimal"
+                android:padding="5dp"
+                android:paddingStart="15dp"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTransactionID_UpdateCapitalExpensesForm" />
+
+
+            <EditText
+                android:id="@+id/etShortNotes_UpdateCapitalExpensesForm"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/big_edit_text_background"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="write short notes"
+                android:inputType="textMultiLine"
+                android:paddingStart="15dp"
+                android:paddingTop="10dp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etTransactionID_UpdateCapitalExpensesForm" />
+
+            <Button
+                android:id="@+id/btnSave_UpdateCapitalExpensesForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/big_button_background"
+                android:padding="0dp"
+                android:text="Save"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etShortNotes_UpdateCapitalExpensesForm" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clAlternativeIncomeList"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:background="@drawable/recycler_view_background"
+    android:elevation="25dp"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/ivAlternativeIncomeImage_AlternativeIncomeLayout"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/text_view_background"
+        android:elevation="25dp"
+        android:src="@drawable/ic_cash_in"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tvCustomer_AlternativeIncomeLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/text_view_background"
+        android:elevation="25dp"
+        android:text="Customer"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/ivAlternativeIncomeImage_AlternativeIncomeLayout"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvAlternativeIncomeDate_AlternativeIncomeLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/text_view_background"
+        android:elevation="25dp"
+        android:text="22-12-2022"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@id/ivAlternativeIncomeImage_AlternativeIncomeLayout"
+        app:layout_constraintTop_toBottomOf="@id/tvCustomer_AlternativeIncomeLayout" />
+
+
+    <TextView
+        android:id="@+id/tvProductName_AlternativeIncomeLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/text_view_background"
+        android:elevation="25dp"
+        android:text="Product"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@id/ivAlternativeIncomeImage_AlternativeIncomeLayout"
+        app:layout_constraintTop_toBottomOf="@id/tvAlternativeIncomeDate_AlternativeIncomeLayout" />
+
+    <TextView
+        android:id="@+id/tvProductCostTitle_AlternativeIncomeLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/text_view_background"
+        android:elevation="25dp"
+        android:text="Product Cost:"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvProductName_AlternativeIncomeLayout" />
+
+
+    <TextView
+        android:id="@+id/tvProductCostUnit_AlternativeIncomeLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="8dp"
+        android:paddingStart="5dp"
+        android:background="@drawable/text_view_background"
+        android:elevation="25dp"
+        android:text="GHS"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@id/tvProductCostTitle_AlternativeIncomeLayout"
+        app:layout_constraintTop_toBottomOf="@id/tvProductName_AlternativeIncomeLayout" />
+
+    <TextView
+        android:id="@+id/tvProductCost_AlternativeIncomeLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/text_view_background"
+        android:elevation="25dp"
+        android:paddingStart="5dp"
+        android:text="23,000"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@id/tvProductCostUnit_AlternativeIncomeLayout"
+        app:layout_constraintTop_toTopOf="@id/tvProductCostUnit_AlternativeIncomeLayout" />
+
+    <TextView
+        android:id="@+id/tvAmountReceivedTitle_AlternativeIncomeLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/text_view_background"
+        android:elevation="25dp"
+        android:text="Amount Received:"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvProductCostTitle_AlternativeIncomeLayout" />
+
+    <TextView
+        android:id="@+id/tvAmountReceivedUnit_AlternativeIncomeLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="8dp"
+        android:paddingStart="5dp"
+        android:background="@drawable/text_view_background"
+        android:elevation="25dp"
+        android:text="GHS"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@id/tvAmountReceivedTitle_AlternativeIncomeLayout"
+        app:layout_constraintTop_toBottomOf="@id/tvProductCostUnit_AlternativeIncomeLayout" />
+
+    <TextView
+        android:id="@+id/tvAmountTheCustomerPaid_AlternativeIncomeLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/text_view_background"
+        android:elevation="25dp"
+        android:paddingStart="5dp"
+        android:text="23,000"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@id/tvAmountReceivedUnit_AlternativeIncomeLayout"
+        app:layout_constraintTop_toTopOf="@id/tvAmountReceivedUnit_AlternativeIncomeLayout" />
+
+
+
+    <TextView
+        android:id="@+id/tvAmountOwedTitle_AlternativeIncomeLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/text_view_background"
+        android:elevation="25dp"
+        android:text="Amount Owed:"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAmountReceivedTitle_AlternativeIncomeLayout" />
+
+    <TextView
+        android:id="@+id/tvAmountOwedUnit_AlternativeIncomeLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="8dp"
+        android:paddingStart="5dp"
+        android:background="@drawable/text_view_background"
+        android:elevation="25dp"
+        android:text="GHS"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@id/tvAmountOwedTitle_AlternativeIncomeLayout"
+        app:layout_constraintTop_toBottomOf="@id/tvAmountReceivedTitle_AlternativeIncomeLayout" />
+
+    <TextView
+        android:id="@+id/tvAmountOwed_AlternativeIncomeLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/text_view_background"
+        android:elevation="25dp"
+        android:paddingStart="5dp"
+        android:text="23,000"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@id/tvAmountOwedUnit_AlternativeIncomeLayout"
+        app:layout_constraintTop_toTopOf="@id/tvAmountOwedUnit_AlternativeIncomeLayout" />
+    
+    <TextView
+        android:id="@+id/tvAlternativeIncomeId_AlternativeIncomeLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:textSize="0sp"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    
+    
+
+
+    <ImageView
+        android:id="@+id/ivUpdate_Delete_Menu_AlternativeIncomeLayout"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/header_background"
+        android:elevation="25dp"
+        android:src="@drawable/ic_more"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

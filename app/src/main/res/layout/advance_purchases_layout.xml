@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardBackgroundColor="@color/background_white"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp">
+
+        <ImageView
+            android:id="@+id/ivAdvancePurchaseImage_AdvancePurchaseLayout"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/recycler_view_image"
+            android:elevation="5dp"
+            android:src="@drawable/cashin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/tvAdvancePurchaseDate_AdvancePurchaseLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:elevation="25dp"
+            android:text="Mon, 02 Jan, 2023"
+            android:textColor="@color/light_black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvCustomer_AdvancePurchaseLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:elevation="25dp"
+            android:text="Aunty Mansa"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/ivAdvancePurchaseImage_AdvancePurchaseLayout"
+            app:layout_constraintTop_toBottomOf="@id/tvAdvancePurchaseDate_AdvancePurchaseLayout" />
+
+        <TextView
+            android:id="@+id/tvItemPurchased_AdvancePurchaseLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:elevation="25dp"
+            android:text="Intact Eggs at GHS 35,000"
+            android:textColor="@color/light_black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/ivAdvancePurchaseImage_AdvancePurchaseLayout"
+            app:layout_constraintTop_toBottomOf="@id/tvCustomer_AdvancePurchaseLayout" />
+
+        <TextView
+            android:id="@+id/tvAmountReceived_AdvancePurchaseLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="8dp"
+            android:elevation="25dp"
+            android:text="GHS 2,000 received"
+            android:textColor="@color/light_black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/ivAdvancePurchaseImage_AdvancePurchaseLayout"
+            app:layout_constraintTop_toBottomOf="@id/tvItemPurchased_AdvancePurchaseLayout"/>
+
+
+        <TextView
+            android:id="@+id/tvAdvancePurchaseDeliveryStatus_AdvancePurchaseLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="8dp"
+            android:elevation="25dp"
+            android:text="Supplied on Mon, Jan 01, 2023"
+            android:textColor="@color/light_black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/ivAdvancePurchaseImage_AdvancePurchaseLayout"
+            app:layout_constraintTop_toBottomOf="@id/tvAmountReceived_AdvancePurchaseLayout" />
+
+
+
+        <TextView
+            android:id="@+id/tvReceiptNumber_AdvancePurchaseLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="8dp"
+            android:elevation="25dp"
+            android:text="Receipt Number: 00953747DE1"
+            android:textColor="@color/light_black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/ivAdvancePurchaseImage_AdvancePurchaseLayout"
+            app:layout_constraintTop_toBottomOf="@id/tvAdvancePurchaseDeliveryStatus_AdvancePurchaseLayout"/>
+
+
+        <ImageView
+            android:id="@+id/ivUpdate_Delete_Menu_AdvancePurchaseLayout"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginBottom="5dp"
+            android:elevation="25dp"
+            android:src="@drawable/ic_more"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

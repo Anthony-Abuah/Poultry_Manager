@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white"
+    tools:context=".health.medication.fragments.UpdateMedicationForm">
+
+    <LinearLayout
+        android:id="@+id/llUpdateMedicationHeader_UpdateMedicationForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/ibBack_UpdateMedicationForm"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="@color/green"
+            android:elevation="25dp"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/tvHeaderInfo_UpdateMedicationForm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_weight="8"
+            android:background="@drawable/header_background"
+            android:elevation="25dp"
+            android:padding="5dp"
+            android:text="Update Medication"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/ibInfo_UpdateMedicationForm"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="@color/green"
+            android:elevation="25dp"
+            android:src="@drawable/ic_information" />
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llUpdateMedicationHeader_UpdateMedicationForm">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="1dp">
+
+            <TextView
+                android:id="@+id/tvEnterDate_UpdateMedicationForm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="16dp"
+                android:text="Enter the date"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/tvDatePicker_UpdateMedicationForm"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvDatePicker_UpdateMedicationForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/big_edit_text_background"
+                android:hint="Enter Date"
+                android:padding="5dp"
+                android:paddingStart="15dp"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvEnterDate_UpdateMedicationForm" />
+
+            <TextView
+                android:id="@+id/tvSelectFlock_UpdateMedicationForm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:drawableEnd="@drawable/ic_info"
+                android:text="Select the flock you are medicating         "
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/spSelectFlock_UpdateMedicationForm"
+                app:layout_constraintTop_toBottomOf="@id/tvDatePicker_UpdateMedicationForm" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/spSelectFlock_UpdateMedicationForm"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSelectFlock_UpdateMedicationForm">
+
+                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                    android:id="@+id/actvSelectFlock_UpdateMedicationForm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/big_edit_text_background"
+                    android:inputType="text"
+
+                    android:paddingStart="15dp"
+                    android:paddingTop="1dp"
+                    android:paddingEnd="2dp"
+                    android:paddingBottom="2dp"
+                    android:textColor="@color/black"
+                    android:textSize="24sp">
+
+                    <requestFocus />
+                </androidx.appcompat.widget.AppCompatAutoCompleteTextView>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvSelectDisease_UpdateMedicationForm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:drawableEnd="@drawable/ic_info"
+                android:text="Select the disease          "
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/spSelectDisease_UpdateMedicationForm"
+                app:layout_constraintTop_toBottomOf="@id/spSelectFlock_UpdateMedicationForm" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/spSelectDisease_UpdateMedicationForm"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSelectDisease_UpdateMedicationForm">
+
+                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                    android:id="@+id/actvSelectDisease_UpdateMedicationForm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/big_edit_text_background"
+                    android:inputType="text"
+
+                    android:paddingStart="15dp"
+                    android:paddingTop="1dp"
+                    android:paddingEnd="2dp"
+                    android:paddingBottom="2dp"
+                    android:textColor="@color/black"
+                    android:textSize="24sp">
+
+                    <requestFocus />
+                </androidx.appcompat.widget.AppCompatAutoCompleteTextView>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvMedicationName_UpdateMedicationForm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="Enter medication name"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/etMedicationName_UpdateMedicationForm"
+                app:layout_constraintTop_toBottomOf="@id/spSelectDisease_UpdateMedicationForm" />
+
+
+            <EditText
+                android:id="@+id/etMedicationName_UpdateMedicationForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/big_edit_text_background"
+                android:drawableEnd="@drawable/ic_info"
+                android:inputType="text"
+                android:padding="5dp"
+                android:paddingStart="15dp"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvMedicationName_UpdateMedicationForm" />
+
+
+            <TextView
+                android:id="@+id/tvNumberOfMedicatedBirds_UpdateMedicationForm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="Enter number of birds"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/etNumberOfMedicatedBirds_UpdateMedicationForm"
+                app:layout_constraintTop_toBottomOf="@id/etMedicationName_UpdateMedicationForm" />
+
+
+            <EditText
+                android:id="@+id/etNumberOfMedicatedBirds_UpdateMedicationForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/big_edit_text_background"
+                android:drawableEnd="@drawable/ic_info"
+                android:inputType="number"
+                android:padding="5dp"
+                android:paddingStart="15dp"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvNumberOfMedicatedBirds_UpdateMedicationForm" />
+
+            <TextView
+                android:id="@+id/tvMedicationCost_UpdateMedicationForm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="Enter cost of medication"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/etMedicationCost_UpdateMedicationForm"
+                app:layout_constraintTop_toBottomOf="@id/etNumberOfMedicatedBirds_UpdateMedicationForm" />
+
+
+            <EditText
+                android:id="@+id/etMedicationCost_UpdateMedicationForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/big_edit_text_background"
+                android:drawableEnd="@drawable/ic_info"
+                android:inputType="numberDecimal"
+                android:padding="5dp"
+                android:paddingStart="15dp"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvMedicationCost_UpdateMedicationForm" />
+
+            <TextView
+                android:id="@+id/tvSelectMedicationAdministrator_UpdateMedicationForm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:drawableEnd="@drawable/ic_info"
+                android:text="Medication administered by            "
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/etMedicationCost_UpdateMedicationForm"
+                app:layout_constraintTop_toBottomOf="@id/etMedicationCost_UpdateMedicationForm" />
+
+            <LinearLayout
+                android:id="@+id/llSelectMedicationAdministrator_UpdateMedicationForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSelectMedicationAdministrator_UpdateMedicationForm">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/spMedicationAdministrator_UpdateMedicationForm"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="7">
+
+
+                    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                        android:id="@+id/actvSelectMedicationAdministrator_UpdateMedicationForm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/big_edit_text_background"
+                        android:inputType="text"
+
+                        android:paddingStart="15dp"
+                        android:paddingTop="1dp"
+                        android:paddingEnd="2dp"
+                        android:paddingBottom="2dp"
+                        android:textColor="@color/black"
+                        android:textSize="20sp">
+
+                        <requestFocus />
+                    </androidx.appcompat.widget.AppCompatAutoCompleteTextView>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/ivAddMedicationAdministrator_UpdateMedicationForm"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:src="@drawable/add" />
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/etShortNotes_UpdateMedicationForm"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/big_edit_text_background"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="write short notes"
+                android:inputType="textMultiLine"
+                android:paddingStart="15dp"
+                android:paddingTop="10dp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llSelectMedicationAdministrator_UpdateMedicationForm" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSave_UpdateMedicationForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/big_button_background"
+                android:padding="0dp"
+                android:text="Save"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etShortNotes_UpdateMedicationForm" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

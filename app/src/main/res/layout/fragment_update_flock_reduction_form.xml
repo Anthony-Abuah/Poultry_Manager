@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white"
+    tools:context=".inventory.flock.reduction.fragments.UpdateFlockReductionForm">
+
+    <LinearLayout
+        android:id="@+id/llUpdateFlockInventoryReductionHeader_UpdateFlockInventoryReductionForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/ibBack_UpdateFlockInventoryReductionForm"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="@color/green"
+            android:elevation="25dp"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/tvHeaderInfo_UpdateFlockInventoryReductionForm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_weight="8"
+            android:background="@drawable/header_background"
+            android:elevation="25dp"
+            android:padding="5dp"
+            android:text="Reduce Flock"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/ibInfo_UpdateFlockInventoryReductionForm"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="@color/green"
+            android:elevation="25dp"
+            android:src="@drawable/ic_information" />
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llUpdateFlockInventoryReductionHeader_UpdateFlockInventoryReductionForm">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp">
+
+
+            <TextView
+                android:id="@+id/tvEnterDate_UpdateFlockInventoryReductionForm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="16dp"
+                android:text="Enter the date"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/tvDatePicker_UpdateFlockInventoryReductionForm"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tvDatePicker_UpdateFlockInventoryReductionForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/big_edit_text_background"
+                android:hint="Enter Date"
+                android:padding="5dp"
+                android:paddingStart="15dp"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvEnterDate_UpdateFlockInventoryReductionForm" />
+
+            <TextView
+                android:id="@+id/tvSelectFlock_UpdateFlockInventoryReductionForm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:drawableEnd="@drawable/ic_info"
+                android:text="Select Flock                 "
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/spSelectFlock_UpdateFlockInventoryReductionForm"
+                app:layout_constraintTop_toBottomOf="@id/tvDatePicker_UpdateFlockInventoryReductionForm" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/spSelectFlock_UpdateFlockInventoryReductionForm"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSelectFlock_UpdateFlockInventoryReductionForm">
+
+                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                    android:id="@+id/actvSelectFlock_UpdateFlockInventoryReductionForm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/big_edit_text_background"
+                    android:inputType="text"
+                    android:paddingStart="15dp"
+                    android:paddingTop="1dp"
+                    android:paddingEnd="2dp"
+                    android:paddingBottom="2dp"
+                    android:textColor="@color/black"
+                    android:textSize="20sp">
+
+                    <requestFocus />
+                </androidx.appcompat.widget.AppCompatAutoCompleteTextView>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/tvFlockReductionQuantity_UpdateFlockInventoryReductionForm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="Enter the number of Birds reduced"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/tvDatePicker_UpdateFlockInventoryReductionForm"
+                app:layout_constraintTop_toBottomOf="@id/spSelectFlock_UpdateFlockInventoryReductionForm" />
+
+
+            <EditText
+                android:id="@+id/etFlockReductionQuantity_UpdateFlockInventoryReductionForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/big_edit_text_background"
+                android:drawableEnd="@drawable/ic_info"
+                android:inputType="numberDecimal"
+                android:padding="5dp"
+                android:paddingStart="15dp"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvFlockReductionQuantity_UpdateFlockInventoryReductionForm" />
+
+            <LinearLayout
+                android:id="@+id/llReductionReason_UpdateFlockInventoryReductionForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etFlockReductionQuantity_UpdateFlockInventoryReductionForm">
+
+                <TextView
+                    android:id="@+id/tvReductionReason_UpdateFlockInventoryReductionForm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:drawableEnd="@drawable/ic_info"
+                    android:text="Reduction reason            "
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/spReductionReason_UpdateFlockInventoryReductionForm"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp">
+
+                    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                        android:id="@+id/actvReductionReason_UpdateFlockInventoryReductionForm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/big_edit_text_background"
+                        android:inputType="text"
+                        android:paddingStart="15dp"
+                        android:paddingTop="1dp"
+                        android:paddingEnd="2dp"
+                        android:paddingBottom="2dp"
+                        android:textColor="@color/black"
+                        android:textSize="20sp">
+
+                        <requestFocus />
+                    </androidx.appcompat.widget.AppCompatAutoCompleteTextView>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llAddCustomer_UpdateFlockInventoryReductionForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/llReductionReason_UpdateFlockInventoryReductionForm">
+
+                <TextView
+                    android:id="@+id/tvCustomer_UpdateFlockInventoryReductionForm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Customer"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="8dp"/>
+
+
+                <LinearLayout
+                    android:id="@+id/llSelectCustomer_UpdateFlockInventoryReductionForm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/spCustomer_UpdateFlockInventoryReductionForm"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="7">
+
+
+                        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                            android:id="@+id/actvCustomer_UpdateFlockInventoryReductionForm"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/big_edit_text_background"
+                            android:inputType="text"
+
+                            android:paddingStart="15dp"
+                            android:paddingTop="1dp"
+                            android:paddingEnd="2dp"
+                            android:paddingBottom="2dp"
+                            android:textColor="@color/black"
+                            android:textSize="20sp">
+
+                            <requestFocus />
+                        </androidx.appcompat.widget.AppCompatAutoCompleteTextView>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <ImageView
+                        android:id="@+id/ivAddCustomer_UpdateFlockInventoryReductionForm"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="1dp"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:src="@drawable/add" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvCost_UpdateFlockInventoryReductionForm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enter the cost of flock sales"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="16dp"/>
+
+                <EditText
+                    android:id="@+id/etCost_UpdateFlockInventoryReductionForm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:textColor="@color/black"
+                    android:drawableEnd="@drawable/ic_info"
+                    android:inputType="numberDecimal"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:paddingStart="15dp"
+                    android:padding="5dp"
+                    android:background="@drawable/big_edit_text_background"/>
+                <TextView
+                    android:id="@+id/tvAmountPaid_UpdateFlockInventoryReductionForm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enter the amount the customer paid"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="16dp"/>
+
+                <EditText
+                    android:id="@+id/etAmountPaid_UpdateFlockInventoryReductionForm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:textColor="@color/black"
+                    android:drawableEnd="@drawable/ic_info"
+                    android:inputType="numberDecimal"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:paddingStart="15dp"
+                    android:padding="5dp"
+                    android:background="@drawable/big_edit_text_background"/>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etShortNotes_UpdateFlockInventoryReductionForm"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/big_edit_text_background"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="write short notes"
+                android:inputType="textMultiLine"
+                android:paddingStart="15dp"
+                android:paddingTop="10dp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llAddCustomer_UpdateFlockInventoryReductionForm" />
+
+            <Button
+                android:id="@+id/btnUpdate_UpdateFlockInventoryReductionForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/big_button_background"
+                android:padding="0dp"
+                android:text="Save"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etShortNotes_UpdateFlockInventoryReductionForm" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+

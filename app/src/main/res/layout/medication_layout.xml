@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="15dp"
+    app:cardBackgroundColor="@color/background_white"
+    android:layout_margin="8dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp">
+
+    <ImageView
+        android:id="@+id/ivMedicationImage_MedLayout"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="6dp"
+        android:src="@drawable/health"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvMedicationName_MedLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:elevation="25dp"
+        android:text="Bird Flu Med"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/ivMedicationImage_MedLayout"
+        app:layout_constraintTop_toBottomOf="@id/tvMedicationDate_MedLayout" />
+
+    <TextView
+        android:id="@+id/tvMedicationDate_MedLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:elevation="25dp"
+        android:text="Mon, 02 01, 2023"
+        android:textColor="@color/light_black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvMedicatedDisease_MedLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:elevation="25dp"
+        android:text="Medicated against Bird Flu"
+        android:textColor="@color/light_black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/ivMedicationImage_MedLayout"
+        app:layout_constraintTop_toBottomOf="@id/tvMedicationName_MedLayout" />
+
+
+        <TextView
+            android:id="@+id/tvMedicationAdministrator_MedLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="8dp"
+            android:elevation="25dp"
+            android:text="Administered by Dr. Dedee"
+            android:textColor="@color/light_black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/ivMedicationImage_MedLayout"
+            app:layout_constraintTop_toBottomOf="@id/tvMedicatedDisease_MedLayout" />
+
+
+        <TextView
+            android:id="@+id/tvMedicationCost_MedLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="8dp"
+            android:elevation="25dp"
+            android:text="Medication costs GHS 2000"
+            android:textColor="@color/light_black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/ivMedicationImage_MedLayout"
+            app:layout_constraintTop_toBottomOf="@id/tvMedicationAdministrator_MedLayout"/>
+
+
+        <TextView
+            android:id="@+id/tvMedicatedFlock_MedLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="8dp"
+            android:elevation="25dp"
+            android:text="Medicated January 2022 Flock"
+            android:textColor="@color/light_black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/ivMedicationImage_MedLayout"
+            app:layout_constraintTop_toBottomOf="@id/tvMedicationCost_MedLayout" />
+
+        <TextView
+            android:id="@+id/tvNumberOfBirds_MedLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="8dp"
+            android:elevation="25dp"
+            android:text="280 birds medicated"
+            android:textColor="@color/light_black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/ivMedicationImage_MedLayout"
+            app:layout_constraintTop_toBottomOf="@id/tvMedicatedFlock_MedLayout" />
+
+
+    <ImageView
+        android:id="@+id/ivUpdate_Delete_Menu_MedLayout"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="5dp"
+        android:elevation="25dp"
+        android:padding="1dp"
+        android:src="@drawable/ic_more"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

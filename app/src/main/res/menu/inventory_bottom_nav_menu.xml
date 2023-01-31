@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/bnmEggInventory"
+        android:title="Egg Inventory"
+        android:icon="@drawable/ic_egg"
+        />
+    <item
+        android:id="@+id/bnmFeedInventory"
+        android:title="Feed Inventory"
+        android:icon="@drawable/feed_inventory_addition"
+        />
+    <item
+        android:id="@+id/bnmFlockInventory"
+        android:title="Flock Inventory"
+        android:icon="@drawable/flock"
+        />
+
+</menu>

@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">Poultry Manager</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+    <string name="showCharts"><u><b><i>showCharts</i></b></u></string>
+
+    <!-- info: The description of questions -->
+    <string name="TransactionID_info">Enter the transaction ID if the money was paid via mobile money or bank transfer</string>
+    <string name="AmountRepaid_info">Enter the amount of money paid to the lender</string>
+    <string name="AmountReceived_info">Enter the amount of money the customer paid for the products</string>
+    <string name="ItemPurchasedCost_info">Enter the total cost of item purchased</string>
+    <string name="AmountInvested_info">Enter the amount of money the invested into the farm by the investor</string>
+    <string name="LoanAmountReceived_info">Enter the amount of loan received from the lender</string>
+    <string name="ExpenseAmount_info">Enter the cost of the expense item purchased/paid for</string>
+    <string name="ReceiptNumber_info">Enter the receipt number if you gave out a receipt</string>
+    <string name="ProductQuantity_info">Enter the number of products you sold</string>
+    <string name="FlockQuantity_info">Enter the number of birds you are working with</string>
+    <string name="FlockReductionQuantity_info">Enter the number of birds you are reducing</string>
+    <string name="FlockName_info">Enter the name you want to give the batch of birds you have acquired</string>
+    <string name="FlockCost_info">Enter the total cost of the birds you have acquired</string>
+    <string name="MedicationCost_info">Enter the total cost of the medicines or vaccines</string>
+    <string name="FlockAge_info">Enter the age of the birds you have acquired</string>
+    <string name="FlockPurpose_info">Enter the purpose of the birds you have acquired</string>
+    <string name="FlockSource_info">Enter the source of the birds you have acquired</string>
+    <string name="FlockBreed_info">Enter the breed of the birds you have acquired</string>
+    <string name="SpoiltEggs_info">Enter the number of spoilt eggs collected</string>
+    <string name="SelectFlock_info">Select the flock you are working with</string>
+    <string name="SelectDisease_info">Select or enter the disease you are treating</string>
+    <string name="SelectAdministrator_info">Select the person administering the vaccination or medication</string>
+    <string name="SelectMedicineName_info">Select the medicine or vaccine you are administering</string>
+    <string name="SelectCustomer_info">Select the customer you are selling to</string>
+    <string name="NumberOfCrates_info">Enter the number of crates of eggs you want to reduce</string>
+    <string name="NumberOfEggsNotInCrates_info">Enter the number of eggs which couldn\'t make up a full crate</string>
+    <string name="EggsReductionReason_info">Select or enter the reason for reducing the eggs</string>
+    <string name="FeedReductionReason_info">Select or enter the reason for reducing the feed</string>
+    <string name="FlockReductionReason_info">Select or enter the reason for reducing the flock</string>
+    <string name="EggType_info">Select to reduce either intact eggs, spoilt eggs or cracked eggs</string>
+    <string name="EggCost_info">Enter to cost of the eggs you are reducing</string>
+    <string name="FeedQuantity_info">Enter the number of kilos of feed acquired</string>
+    <string name="FeedCost_info">Enter the cost of feed acquired</string>
+    <string name="FeedSource_info">Enter the place you got your feed from</string>
+    <string name="SelectFeed_info">Select the feed you are working with</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_inventory">InventoryActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+</resources>

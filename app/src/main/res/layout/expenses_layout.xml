@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clEggsAdditionList"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="15dp"
+    app:cardBackgroundColor="@color/background_white"
+    android:layout_margin="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp">
+
+    <ImageView
+        android:id="@+id/ivExpensesImage_ExpensesLayout"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="4dp"
+        android:background="@drawable/recycler_view_image"
+        android:elevation="5dp"
+        android:src="@drawable/operational_expenses"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/tvExpensesDate_ExpensesLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:elevation="25dp"
+        android:text="22-10-2022"
+        android:textColor="@color/light_black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"  />
+
+    <TextView
+        android:id="@+id/tvExpenseName_ExpensesLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:elevation="25dp"
+        android:text="Water Bill"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/ivExpensesImage_ExpensesLayout"
+        app:layout_constraintTop_toBottomOf="@id/tvExpensesDate_ExpensesLayout" />
+
+        <TextView
+            android:id="@+id/tvExpenseAmount_ExpensesLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="8dp"
+            android:elevation="25dp"
+            android:text="GHS 2,000"
+            android:textColor="@color/light_black"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/tvExpenseName_ExpensesLayout"
+            app:layout_constraintStart_toEndOf="@id/ivExpensesImage_ExpensesLayout"/>
+
+
+        <TextView
+            android:id="@+id/tvPaymentMethod_ExpensesLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="8dp"
+            android:elevation="25dp"
+            android:text="Payed via Cash"
+            android:textColor="@color/light_black"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/tvExpenseAmount_ExpensesLayout"
+            app:layout_constraintStart_toEndOf="@id/ivExpensesImage_ExpensesLayout"/>
+
+        <TextView
+            android:id="@+id/tvTransactionID_ExpenseLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="8dp"
+            android:elevation="25dp"
+            android:text="Transaction ID: 000230956D"
+            android:textColor="@color/light_black"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/tvPaymentMethod_ExpensesLayout"
+            app:layout_constraintStart_toEndOf="@id/ivExpensesImage_ExpensesLayout"/>
+
+
+    <ImageView
+        android:id="@+id/ivUpdate_Delete_Menu_ExpensesLayout"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="5dp"
+        android:elevation="25dp"
+        android:src="@drawable/ic_more"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

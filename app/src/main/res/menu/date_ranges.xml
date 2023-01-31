@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/miAllTime"
+        android:title="All Time"
+        />
+    <item
+        android:id="@+id/miToday"
+        android:title="Today"
+        />
+    <item
+        android:id="@+id/miThisWeek"
+        android:title="This Week"
+        />
+    <item
+        android:id="@+id/miThisMonth"
+        android:title="This Month"
+        />
+    <item
+        android:id="@+id/miPastThreeMonths"
+        android:title="Past Three Months"
+        />
+    <item
+        android:id="@+id/miPastSixMonths"
+        android:title="Past Six Months"
+        />
+    <item
+        android:id="@+id/miPastYear"
+        android:title="Past Year"
+        />
+    <item
+        android:id="@+id/miPastTwoYears"
+        android:title="Past Two Years"
+        />
+    <item
+        android:id="@+id/miCustomDateRange"
+        android:title="Custom date range"
+        />
+
+</menu>

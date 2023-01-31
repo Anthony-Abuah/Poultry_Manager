@@ -1,0 +1,818 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white"
+    tools:context=".reports.feed_inventory.fragments.GeneralFeedReport">
+
+    <LinearLayout
+        android:id="@+id/llGeneralFeedReportHeader_GeneralFeedReport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/ibBack_GeneralFeedReport"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="2dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_back"
+            android:background="@color/green"
+            android:elevation="25dp"
+            />
+
+        <TextView
+            android:id="@+id/tvHeaderInfo_GeneralFeedReport"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_weight="5"
+            android:elevation="25dp"
+            android:padding="5dp"
+            android:text="Feed Report"
+            android:textColor="@color/white"
+            android:background="@drawable/header_background"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/ibDateFilter_GeneralFeedReport"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:layout_gravity="center"
+            android:src="@drawable/image_button_background"
+            android:background="@color/green"
+            android:elevation="25dp"
+            />
+
+        <ImageButton
+            android:id="@+id/ibPDF_GeneralFeedReport"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_pdf"
+            android:background="@color/green"
+            android:elevation="25dp"
+            />
+
+        <ImageButton
+            android:id="@+id/ibFilterAttributes_GeneralFeedReport"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="5dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_filter"
+            android:background="@color/green"
+            android:elevation="25dp"
+            />
+
+
+    </LinearLayout>
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingTop="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llGeneralFeedReportHeader_GeneralFeedReport">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp">
+
+            <LinearLayout
+                android:id="@+id/llMainSummaryContainer_GeneralFeedReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/small_edit_text_background"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/llFeedNameQuantityAddedContainer_GeneralFeedReport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="42dp">
+                    
+                    <LinearLayout
+                        android:id="@+id/llFeedNameQuantityAddedHeaderContainer_GeneralFeedReport"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginEnd="7dp"
+                        android:layout_marginBottom="1dp"
+                        android:orientation="horizontal">
+                        
+                        <TextView
+                            android:id="@+id/tvFeedNameQuantityAddedHeaderName_GeneralFeedReport"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:background="@color/green"
+                            android:elevation="25dp"
+                            android:gravity="start"
+                            android:padding="8dp"
+                            app:drawableRightCompat="@drawable/ic_dropdown"
+                            android:text="Feed Added Name"
+                            android:textColor="@color/white"
+                            android:textSize="24sp"
+                            android:textStyle="bold"/>
+                        
+                        <TextView
+                            android:id="@+id/tvFeedNameQuantityAddedHeaderValue_GeneralFeedReport"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@color/green"
+                            android:elevation="25dp"
+                            android:gravity="end"
+                            android:padding="8dp"
+                            android:text="Quantity"
+                            android:textColor="@color/white"
+                            android:textSize="24sp"
+                            android:textStyle="bold"/>
+                        
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvDailyFeedNameQuantityAddedReport_GeneralFeedReport"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginBottom="1dp"
+                        tools:listitem="@layout/date_quantity_layout" />
+
+                    <LinearLayout
+                        android:id="@+id/llTotalFeedNameQuantityAddedContainer_GeneralFeedReport"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvTotalFeedNameQuantityAddedTitle_GeneralFeedReport"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@color/green"
+                            android:elevation="25dp"
+                            android:gravity="start"
+                            android:padding="8dp"
+                            android:text="Total"
+                            android:textColor="@color/white"
+                            android:textSize="24sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/tvTotalFeedNameQuantityAddedValue_GeneralFeedReport"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:background="@color/green"
+                            android:elevation="25dp"
+                            android:gravity="end"
+                            android:padding="8dp"
+                            android:text="Quantity"
+                            android:textColor="@color/white"
+                            android:textSize="24sp"
+                            android:textStyle="bold"/>
+                        
+                    </LinearLayout>
+                    
+                </LinearLayout>
+                
+                <LinearLayout
+                    android:id="@+id/llFlockNameFeedQuantityContainer_GeneralFeedReport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="42dp">
+                    
+                    <LinearLayout
+                        android:id="@+id/llFlockNameFeedQuantityHeaderContainer_GeneralFeedReport"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginEnd="7dp"
+                        android:layout_marginBottom="1dp"
+                        android:orientation="horizontal">
+                        
+                        <TextView
+                            android:id="@+id/tvFlockNameFeedQuantityHeaderName_GeneralFeedReport"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:background="@color/green"
+                            android:elevation="25dp"
+                            android:gravity="start"
+                            android:padding="8dp"
+                            app:drawableRightCompat="@drawable/ic_dropdown"
+                            android:text="Flock Name"
+                            android:textColor="@color/white"
+                            android:textSize="24sp"
+                            android:textStyle="bold"/>
+                        
+                        <TextView
+                            android:id="@+id/tvFlockNameFeedQuantityHeaderValue_GeneralFeedReport"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@color/green"
+                            android:elevation="25dp"
+                            android:gravity="end"
+                            android:padding="8dp"
+                            android:text="Quantity Fed"
+                            android:textColor="@color/white"
+                            android:textSize="24sp"
+                            android:textStyle="bold"/>
+                        
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvDailyFlockNameFeedQuantityReport_GeneralFeedReport"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginBottom="1dp"
+                        tools:listitem="@layout/date_quantity_layout" />
+
+                    <LinearLayout
+                        android:id="@+id/llTotalFlockNameFeedQuantityContainer_GeneralFeedReport"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvTotalFlockNameFeedQuantityName_GeneralFeedReport"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@color/green"
+                            android:elevation="25dp"
+                            android:gravity="start"
+                            android:padding="8dp"
+                            android:text="Total"
+                            android:textColor="@color/white"
+                            android:textSize="24sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/tvTotalFlockNameFeedQuantityValue_GeneralFeedReport"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:background="@color/green"
+                            android:elevation="25dp"
+                            android:gravity="end"
+                            android:padding="8dp"
+                            android:text="Quantity"
+                            android:textColor="@color/white"
+                            android:textSize="24sp"
+                            android:textStyle="bold"/>
+                        
+                    </LinearLayout>
+                    
+                </LinearLayout>
+                
+                <LinearLayout
+                    android:id="@+id/llFeedReductionReasonQuantityContainer_GeneralFeedReport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="42dp">
+                    
+                    <LinearLayout
+                        android:id="@+id/llFeedReductionReasonQuantityHeaderContainer_GeneralFeedReport"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginEnd="7dp"
+                        android:layout_marginBottom="1dp"
+                        android:orientation="horizontal">
+                        
+                        <TextView
+                            android:id="@+id/tvFeedReductionReasonQuantityHeaderName_GeneralFeedReport"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:background="@color/green"
+                            android:elevation="25dp"
+                            android:gravity="start"
+                            android:padding="8dp"
+                            app:drawableRightCompat="@drawable/ic_dropdown"
+                            android:text="Reduction Reason"
+                            android:textColor="@color/white"
+                            android:textSize="24sp"
+                            android:textStyle="bold"/>
+                        
+                        <TextView
+                            android:id="@+id/tvFeedReductionReasonQuantityHeaderValue_GeneralFeedReport"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@color/green"
+                            android:elevation="25dp"
+                            android:gravity="end"
+                            android:padding="8dp"
+                            android:text="Quantity"
+                            android:textColor="@color/white"
+                            android:textSize="24sp"
+                            android:textStyle="bold"/>
+                        
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvFeedReductionReasonQuantityReport_GeneralFeedReport"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginBottom="1dp"
+                        tools:listitem="@layout/date_quantity_layout" />
+
+                    <LinearLayout
+                        android:id="@+id/llTotalFeedReductionReasonQuantityContainer_GeneralFeedReport"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvTotalFeedReductionReasonQuantityName_GeneralFeedReport"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@color/green"
+                            android:elevation="25dp"
+                            android:gravity="start"
+                            android:padding="8dp"
+                            android:text="Total"
+                            android:textColor="@color/white"
+                            android:textSize="24sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/tvTotalFeedReductionReasonQuantityValue_GeneralFeedReport"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:background="@color/green"
+                            android:elevation="25dp"
+                            android:gravity="end"
+                            android:padding="8dp"
+                            android:text="Quantity"
+                            android:textColor="@color/white"
+                            android:textSize="24sp"
+                            android:textStyle="bold"/>
+                        
+                    </LinearLayout>
+                    
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llFeedNameQuantityReducedContainer_GeneralFeedReport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="42dp">
+
+                    <LinearLayout
+                        android:id="@+id/llFeedNameQuantityReducedHeaderContainer_GeneralFeedReport"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginEnd="7dp"
+                        android:layout_marginBottom="1dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvFeedNameQuantityReducedHeaderName_GeneralFeedReport"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:background="@color/green"
+                            android:elevation="25dp"
+                            android:gravity="start"
+                            android:padding="8dp"
+                            app:drawableRightCompat="@drawable/ic_dropdown"
+                            android:text="Feed Reduced Name"
+                            android:textColor="@color/white"
+                            android:textSize="24sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/tvFeedNameQuantityReducedHeaderValue_GeneralFeedReport"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@color/green"
+                            android:elevation="25dp"
+                            android:gravity="end"
+                            android:padding="8dp"
+                            android:text="Quantity"
+                            android:textColor="@color/white"
+                            android:textSize="24sp"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvDailyFeedNameQuantityReducedReport_GeneralFeedReport"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginBottom="1dp"
+                        tools:listitem="@layout/date_quantity_layout" />
+
+                    <LinearLayout
+                        android:id="@+id/llTotalFeedNameQuantityReducedContainer_GeneralFeedReport"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvTotalFeedNameQuantityReducedTitle_GeneralFeedReport"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@color/green"
+                            android:elevation="25dp"
+                            android:gravity="start"
+                            android:padding="8dp"
+                            android:text="Total"
+                            android:textColor="@color/white"
+                            android:textSize="24sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/tvTotalFeedNameQuantityReducedValue_GeneralFeedReport"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:background="@color/green"
+                            android:elevation="25dp"
+                            android:gravity="end"
+                            android:padding="8dp"
+                            android:text="Quantity"
+                            android:textColor="@color/white"
+                            android:textSize="24sp"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llFeedNameCostContainer_GeneralFeedReport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="42dp">
+
+                    <LinearLayout
+                        android:id="@+id/llFeedNameCostHeaderContainer_GeneralFeedReport"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginEnd="7dp"
+                        android:layout_marginBottom="1dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvFeedNameCostHeaderName_GeneralFeedReport"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:background="@color/green"
+                            android:elevation="25dp"
+                            android:gravity="start"
+                            android:padding="8dp"
+                            app:drawableRightCompat="@drawable/ic_dropdown"
+                            android:text="Feed Name"
+                            android:textColor="@color/white"
+                            android:textSize="24sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/tvFeedNameCostHeaderValue_GeneralFeedReport"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@color/green"
+                            android:elevation="25dp"
+                            android:gravity="end"
+                            android:padding="8dp"
+                            android:text="Cost"
+                            android:textColor="@color/white"
+                            android:textSize="24sp"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvFeedNameCostReport_GeneralFeedReport"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginBottom="1dp"
+                        tools:listitem="@layout/date_quantity_layout" />
+
+                    <LinearLayout
+                        android:id="@+id/llTotalFeedNameCostContainer_GeneralFeedReport"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvTotalFeedNameCostTitle_GeneralFeedReport"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@color/green"
+                            android:elevation="25dp"
+                            android:gravity="start"
+                            android:padding="8dp"
+                            android:text="Total"
+                            android:textColor="@color/white"
+                            android:textSize="24sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/tvTotalFeedNameCostValue_GeneralFeedReport"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:background="@color/green"
+                            android:elevation="25dp"
+                            android:gravity="end"
+                            android:padding="8dp"
+                            android:text="Quantity"
+                            android:textColor="@color/white"
+                            android:textSize="24sp"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llMainFeedAcquisitionsContainer_GeneralFeedReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/small_edit_text_background"
+                app:layout_constraintTop_toBottomOf="@id/llMainSummaryContainer_GeneralFeedReport"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/llFeedAcquisitionsHeaderContainer_GeneralFeedReport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginBottom="1dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvFeedAcquisitionHeaderName_GeneralFeedReport"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="@color/green"
+                        android:elevation="25dp"
+                        android:gravity="start"
+                        android:padding="8dp"
+                        app:drawableRightCompat="@drawable/ic_dropdown"
+                        android:text="Feed Acquisition"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tvFeedAcquisitionHeaderQuantity_GeneralFeedReport"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/green"
+                        android:elevation="25dp"
+                        android:gravity="end"
+                        android:padding="8dp"
+                        android:text="Quantity"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvDailyFeedAcquisitionsReport_GeneralFeedReport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="1dp"
+                    tools:listitem="@layout/date_quantity_layout" />
+
+                <LinearLayout
+                    android:id="@+id/llTotalFeedAcquisitionsContainer_GeneralFeedReport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvTotalFeedAcquisitionName_GeneralFeedReport"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/green"
+                        android:elevation="25dp"
+                        android:gravity="start"
+                        android:padding="8dp"
+                        android:text="Total"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tvTotalFeedAcquisitionValue_GeneralFeedReport"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:background="@color/green"
+                        android:elevation="25dp"
+                        android:gravity="end"
+                        android:padding="8dp"
+                        android:text="Quantity"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llMainFeedReductionContainer_GeneralFeedReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/small_edit_text_background"
+                app:layout_constraintTop_toBottomOf="@id/llMainFeedAcquisitionsContainer_GeneralFeedReport"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/llFeedReductionHeaderContainer_GeneralFeedReport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginBottom="1dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvFeedReductionHeaderName_GeneralFeedReport"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="@color/green"
+                        android:elevation="25dp"
+                        android:gravity="start"
+                        android:padding="8dp"
+                        app:drawableRightCompat="@drawable/ic_dropdown"
+                        android:text="Feed Reduction"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tvFeedReductionHeaderQuantity_GeneralFeedReport"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/green"
+                        android:elevation="25dp"
+                        android:gravity="end"
+                        android:padding="8dp"
+                        android:text="Quantity"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvDailyFeedReductionReport_GeneralFeedReport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="1dp"
+                    tools:listitem="@layout/date_quantity_layout" />
+
+                <LinearLayout
+                    android:id="@+id/llTotalFeedReductionContainer_GeneralFeedReport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvTotalFeedReductionName_GeneralFeedReport"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/green"
+                        android:elevation="25dp"
+                        android:gravity="start"
+                        android:padding="8dp"
+                        android:text="Total"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tvTotalFeedReductionValue_GeneralFeedReport"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:background="@color/green"
+                        android:elevation="25dp"
+                        android:gravity="end"
+                        android:padding="8dp"
+                        android:text="Quantity"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

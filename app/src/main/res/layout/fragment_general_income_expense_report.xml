@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white"
+    tools:context=".reports.income_expenses.fragments.GeneralIncomeExpenseReport">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingTop="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvHeader_GeneralIncomeExpensesReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="10dp"
+                app:cardCornerRadius="3dp"
+                app:cardBackgroundColor="@color/background_white"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="15dp">
+
+
+                <ImageView
+                    android:id="@+id/ivBack_GeneralIncomeExpensesReport"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="16dp"
+                    android:src="@drawable/ic_go_back"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <ImageView
+                    android:id="@+id/ivDateFilter_GeneralIncomeExpensesReport"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="16dp"
+                    android:src="@drawable/ic_the_date_filter"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:textAllCaps="true" />
+
+                <TextView
+                    android:id="@+id/tvGeneralOverview_GeneralIncomeExpensesReport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="General Overview"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ivBack_GeneralIncomeExpensesReport"
+                    app:textAllCaps="true" />
+
+                <TextView
+                    android:id="@+id/tvShowCharts_GeneralIncomeExpensesReport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/showCharts"
+                    android:textColor="@color/blue"
+                    android:textSize="12sp"
+                    android:textStyle="bold|italic"
+                    android:gravity="center"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tvGeneralOverviewDate_GeneralIncomeExpensesReport"
+                    app:layout_constraintBottom_toBottomOf="@id/tvGeneralOverviewDate_GeneralIncomeExpensesReport"
+                    />
+
+                <TextView
+                    android:id="@+id/tvGeneralOverviewDescription_GeneralIncomeExpensesReport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="Summary of this month's income and expenses"
+                    android:textColor="@color/light_black"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvGeneralOverview_GeneralIncomeExpensesReport"
+                    />
+
+                <TextView
+                    android:id="@+id/tvGeneralOverviewDate_GeneralIncomeExpensesReport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:drawablePadding="8dp"
+                    android:text="January 2023"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvGeneralOverviewDescription_GeneralIncomeExpensesReport"
+                    app:drawableStartCompat="@drawable/ic_calendar" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/pcGeneralOverview_GeneralIncomeExpensesReport"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:paddingBottom="40dp"
+                android:layout_margin="16dp"
+                app:layout_constraintTop_toBottomOf="@id/cvHeader_GeneralIncomeExpensesReport"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+            <LinearLayout
+                android:id="@+id/llGeneralOverviewLegendContainer_GeneralIncomeExpensesReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:padding="2dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/pcGeneralOverview_GeneralIncomeExpensesReport"
+                app:layout_constraintStart_toStartOf="parent">
+
+            </LinearLayout>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvExpenses_GeneralIncomeExpensesReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="10dp"
+                app:cardCornerRadius="3dp"
+                app:cardBackgroundColor="@color/background_white"
+                app:layout_constraintTop_toBottomOf="@id/llGeneralOverviewLegendContainer_GeneralIncomeExpensesReport"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="15dp">
+
+                    <TextView
+                        android:id="@+id/tvOperationalExpenses_GeneralIncomeExpensesReport"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Operational Expenses"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:textAllCaps="true" />
+
+                    <TextView
+                        android:id="@+id/tvOperationalExpensesDescription_GeneralIncomeExpensesReport"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="Summary of this month's operational Expenses"
+                        android:textColor="@color/light_black"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvOperationalExpenses_GeneralIncomeExpensesReport"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvOperationalExpensesDate_GeneralIncomeExpensesReport"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:drawablePadding="8dp"
+                        android:text="January 2023"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvOperationalExpensesDescription_GeneralIncomeExpensesReport"
+                        app:drawableStartCompat="@drawable/ic_calendar" />
+<!--
+
+                    <HorizontalScrollView
+                        android:id="@+id/svExpensesHorizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:layout_margin="8dp"
+                        app:layout_constraintTop_toBottomOf="@id/tvOperationalExpensesDate_GeneralIncomeExpensesReport"
+                        app:layout_constraintStart_toStartOf="parent">
+-->
+
+                            <com.github.mikephil.charting.charts.PieChart
+                                android:id="@+id/pcOperationalExpenses_GeneralIncomeExpensesReport"
+                                android:layout_width="match_parent"
+                                android:layout_height="300dp"
+                                android:paddingBottom="40dp"
+                                android:layout_margin="16dp"
+                                app:layout_constraintTop_toBottomOf="@id/tvOperationalExpensesDate_GeneralIncomeExpensesReport"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                />
+
+<!--
+
+                    </HorizontalScrollView>
+-->
+
+                    <LinearLayout
+                        android:id="@+id/llOperationalExpensesLegendContainer_GeneralIncomeExpensesReport"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:padding="2dp"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toBottomOf="@id/pcOperationalExpenses_GeneralIncomeExpensesReport"
+                        app:layout_constraintStart_toStartOf="parent"/>
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvIncome_GeneralIncomeExpensesReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="10dp"
+                app:cardCornerRadius="3dp"
+                app:cardBackgroundColor="@color/background_white"
+                app:layout_constraintTop_toBottomOf="@id/cvExpenses_GeneralIncomeExpensesReport"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="15dp">
+
+                    <TextView
+                        android:id="@+id/tvIncome_GeneralIncomeExpensesReport"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Income"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:textAllCaps="true" />
+
+                    <TextView
+                        android:id="@+id/tvIncomeDescription_GeneralIncomeExpensesReport"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="Summary of this month's income"
+                        android:textColor="@color/light_black"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvIncome_GeneralIncomeExpensesReport"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvIncomeDate_GeneralIncomeExpensesReport"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:drawablePadding="8dp"
+                        android:text="January 2023"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvIncomeDescription_GeneralIncomeExpensesReport"
+                        app:drawableStartCompat="@drawable/ic_calendar" />
+
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:id="@+id/pcIncome_GeneralIncomeExpensesReport"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:paddingBottom="40dp"
+                        android:layout_margin="16dp"
+                        app:layout_constraintTop_toBottomOf="@id/tvIncomeDate_GeneralIncomeExpensesReport"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        />
+
+                    <LinearLayout
+                        android:id="@+id/llIncomeLegendContainer_GeneralIncomeExpensesReport"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:padding="2dp"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toBottomOf="@id/pcIncome_GeneralIncomeExpensesReport"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

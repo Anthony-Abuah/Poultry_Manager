@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="15dp"
+    app:cardBackgroundColor="@color/background_white"
+    android:layout_margin="8dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp">
+
+    <ImageView
+        android:id="@+id/ivFeedInventoryReductionImage_FeedInventoryReductionLayout"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/recycler_view_image"
+        android:elevation="5dp"
+        android:layout_marginStart="4dp"
+        android:src="@drawable/feed_inventory_reduction"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvFeedReductionDate_FeedInventoryReductionLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:elevation="25dp"
+        android:text="22-10-2022"
+        android:textColor="@color/light_black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tvFeedName_FeedInventoryReductionLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:elevation="25dp"
+        android:text="Eco Layer Mash"
+        android:textColor="@color/main_green"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/ivFeedInventoryReductionImage_FeedInventoryReductionLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+        <TextView
+        android:id="@+id/tvFeedReductionQuantity_FeedInventoryReductionLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="8dp"
+        android:elevation="25dp"
+        android:text="280 kg reduced"
+        android:textColor="@color/light_black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/ivFeedInventoryReductionImage_FeedInventoryReductionLayout"
+        app:layout_constraintTop_toBottomOf="@id/tvFeedName_FeedInventoryReductionLayout"
+        />
+
+
+        <TextView
+        android:id="@+id/tvFlockName_FeedInventoryReductionLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="8dp"
+        android:elevation="25dp"
+        android:text="Fed to September 2022 birds"
+        android:textColor="@color/light_black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/ivFeedInventoryReductionImage_FeedInventoryReductionLayout"
+        app:layout_constraintTop_toBottomOf="@id/tvFeedReductionQuantity_FeedInventoryReductionLayout"
+        />
+
+
+
+    <ImageView
+        android:id="@+id/ivEdit_Delete_Menu_FeedInventoryReductionLayout"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="5dp"
+        android:src="@drawable/ic_more"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

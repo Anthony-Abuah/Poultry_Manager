@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardBackgroundColor="@color/background_white"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp">
+
+        <ImageView
+            android:id="@+id/ivLoansAndInvestmentImage_LoansAndInvestmentLayout"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/recycler_view_image"
+            android:elevation="5dp"
+            android:src="@drawable/ic_cash_in"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tvLoansAndInvestmentDate_LoansAndInvestmentLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:elevation="25dp"
+            android:text="22-10-2022"
+            android:textColor="@color/light_black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tvLenderOrInvestor_LoansAndInvestmentLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:elevation="25dp"
+            android:text="ABSA Bank"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/ivLoansAndInvestmentImage_LoansAndInvestmentLayout"
+            app:layout_constraintTop_toBottomOf="@id/tvLoansAndInvestmentDate_LoansAndInvestmentLayout" />
+
+        <TextView
+            android:id="@+id/tvAmountReceived_LoansAndInvestmentLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="8dp"
+            android:elevation="25dp"
+            android:text="GHS 50,000"
+            android:textColor="@color/light_black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/ivLoansAndInvestmentImage_LoansAndInvestmentLayout"
+            app:layout_constraintTop_toBottomOf="@id/tvLenderOrInvestor_LoansAndInvestmentLayout" />
+
+
+        <TextView
+            android:id="@+id/tvTransactionID_LoansAndInvestmentLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="8dp"
+            android:elevation="25dp"
+            android:text="Transaction ID: 00234890500"
+            android:textColor="@color/light_black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/ivLoansAndInvestmentImage_LoansAndInvestmentLayout"
+            app:layout_constraintTop_toBottomOf="@id/tvAmountReceived_LoansAndInvestmentLayout" />
+
+        <ImageView
+            android:id="@+id/ivUpdate_Delete_Menu_LoansAndInvestmentLayout"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginBottom="5dp"
+            android:elevation="25dp"
+            android:src="@drawable/ic_more"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

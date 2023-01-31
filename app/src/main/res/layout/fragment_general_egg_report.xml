@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white"
+    tools:context=".reports.egg_inventory.fragments.GeneralEggReport">
+
+    <LinearLayout
+        android:id="@+id/llGeneralEggReportHeader_GeneralEggReport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/ibBack_GeneralEggReport"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="2dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_back"
+            android:background="@color/green"
+            android:elevation="25dp"
+            />
+
+        <TextView
+            android:id="@+id/tvHeaderInfo_GeneralEggReport"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_weight="5"
+            android:elevation="25dp"
+            android:padding="5dp"
+            android:text="Egg Report"
+            android:textColor="@color/white"
+            android:background="@drawable/header_background"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/ibDateFilter_GeneralEggReport"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:layout_gravity="center"
+            android:src="@drawable/image_button_background"
+            android:background="@color/green"
+            android:elevation="25dp"
+            />
+
+        <ImageButton
+            android:id="@+id/ibPDF_GeneralEggReport"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_pdf"
+            android:background="@color/green"
+            android:elevation="25dp"
+            />
+
+        <ImageButton
+            android:id="@+id/ibFilterAttributes_GeneralEggReport"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="5dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_filter"
+            android:background="@color/green"
+            android:elevation="25dp"
+            />
+
+
+    </LinearLayout>
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingTop="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llGeneralEggReportHeader_GeneralEggReport">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp">
+
+            <ImageView
+                android:id="@+id/ivEggReportImage_GeneralEggReport"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:padding="4dp"
+                android:src="@drawable/report_header"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvEggReportInfo_GeneralEggReport"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:padding="5dp"
+                android:text="View all your farm reports. Easy to understand and make important inferences from thes reports"
+                android:textColor="@color/light_black"
+                android:textSize="18sp"
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivEggReportImage_GeneralEggReport"/>
+
+
+
+            <TextView
+                android:id="@+id/tvEggReductionSummary_GeneralEggReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/green"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:elevation="25dp"
+                android:gravity="start"
+                app:drawableRightCompat="@drawable/ic_dropdown"
+                android:padding="8dp"
+                android:text="Summary"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/tvEggReportInfo_GeneralEggReport"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                 />
+
+            <LinearLayout
+                android:id="@+id/llSummary_GeneralEggReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="2dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvEggReductionSummary_GeneralEggReport">
+
+
+            <LinearLayout
+                android:id="@+id/llEggInventoryReductionReasonHeader_GeneralEggReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="1dp"
+                android:background="@color/green"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvEggReductionSummary_GeneralEggReport">
+
+                <TextView
+                    android:id="@+id/tvReductionReasons_GeneralEggReport"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:background="@color/green"
+                    android:elevation="25dp"
+                    android:gravity="start"
+                    android:padding="8dp"
+                    android:text="Reduction Reasons"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvReductionReasonQuantities_GeneralEggReport"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/green"
+                    android:elevation="25dp"
+                    android:gravity="end"
+                    android:padding="8dp"
+                    android:text="Quantity"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+                <LinearLayout
+                android:id="@+id/llEggReductionReasonTotal_GeneralEggReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/report_background"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvEggReductionReasonReport_GeneralEggReport">
+
+                <TextView
+                    android:id="@+id/tvReductionReasonTitle_DateQuantityLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:elevation="25dp"
+                    android:gravity="start"
+                    android:padding="8dp"
+                    android:text="Total"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvReductionReasonQuantityValue_DateQuantityLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:elevation="25dp"
+                    android:gravity="end"
+                    android:padding="8dp"
+                    android:text="50,000 crates, 1,000 eggs"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tvEggAdditions_GeneralEggReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/green"
+                android:layout_marginTop="48dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:elevation="25dp"
+                android:gravity="start"
+                app:drawableRightCompat="@drawable/ic_dropdown"
+                android:padding="8dp"
+                android:text="EggAdditions"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/llSummary_GeneralEggReport"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <LinearLayout
+                android:id="@+id/llEggInventoryAdditions_GeneralEggReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="2dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvEggAdditions_GeneralEggReport">
+
+
+            <LinearLayout
+                android:id="@+id/llEggInventoryAdditionHeader_GeneralEggReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="1dp"
+                android:background="@color/green"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvEggAdditions_GeneralEggReport">
+
+                <TextView
+                    android:id="@+id/tvAdditionDates_GeneralEggReport"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/green"
+                    android:elevation="25dp"
+                    android:gravity="start"
+                    android:padding="8dp"
+                    android:text="Date"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvAdditionQuantities_GeneralEggReport"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/green"
+                    android:elevation="25dp"
+                    android:gravity="end"
+                    android:padding="8dp"
+                    android:text="Quantity"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvEggInventoryAdditionReport_GeneralEggReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/llEggInventoryAdditionHeader_GeneralEggReport"
+                app:layout_constraintVertical_bias="1.0"
+                tools:listitem="@layout/date_quantity_layout" />
+
+            <LinearLayout
+                android:id="@+id/llEggInventoryAdditionTotal_GeneralEggReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="1dp"
+                android:background="@color/green"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvEggInventoryAdditionReport_GeneralEggReport">
+
+                <TextView
+                    android:id="@+id/tvTotalAdditionQuantityTitle_DateQuantityLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:background="@color/green"
+                    android:elevation="25dp"
+                    android:gravity="start"
+                    android:padding="8dp"
+                    android:text="Total"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvTotalAdditionQuantityValue_DateQuantityLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:background="@color/green"
+                    android:elevation="25dp"
+                    android:gravity="end"
+                    android:padding="8dp"
+                    android:text="50,000 crates, 1,000 eggs"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvEggReductions_GeneralEggReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/green"
+                android:layout_marginTop="48dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:elevation="25dp"
+                android:gravity="start"
+                app:drawableRightCompat="@drawable/ic_dropdown"
+                android:padding="8dp"
+                android:text="Egg Reductions"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/llEggInventoryAdditions_GeneralEggReport"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <LinearLayout
+                android:id="@+id/llEggInventoryReductions_GeneralEggReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="2dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvEggReductions_GeneralEggReport">
+
+
+            <LinearLayout
+                android:id="@+id/llEggInventoryReductionHeader_GeneralEggReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="1dp"
+                android:background="@color/green"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvEggReductions_GeneralEggReport">
+
+                <TextView
+                    android:id="@+id/tvReductionDates_GeneralEggReport"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/green"
+                    android:elevation="25dp"
+                    android:gravity="start"
+                    android:padding="8dp"
+                    android:text="Date"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvReductionQuantities_GeneralEggReport"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/green"
+                    android:elevation="25dp"
+                    android:gravity="end"
+                    android:padding="8dp"
+                    android:text="Quantity"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvEggInventoryReductionReport_GeneralEggReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/llEggInventoryReductionHeader_GeneralEggReport"
+                app:layout_constraintVertical_bias="1.0"
+                tools:listitem="@layout/date_quantity_layout" />
+            <LinearLayout
+                android:id="@+id/llEggInventoryReductionTotal_GeneralEggReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="1dp"
+                android:background="@color/green"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvEggInventoryReductionReport_GeneralEggReport">
+
+                <TextView
+                    android:id="@+id/tvTotalReductionQuantityTitle_DateQuantityLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:background="@color/green"
+                    android:elevation="25dp"
+                    android:gravity="start"
+                    android:padding="8dp"
+                    android:text="Total"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvTotalReductionQuantityValue_DateQuantityLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:background="@color/green"
+                    android:elevation="25dp"
+                    android:gravity="end"
+                    android:padding="8dp"
+                    android:text="50,000 crates, 1,000 eggs"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvEggReductionReasonReport_GeneralEggReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="300dp"
+                android:layout_marginEnd="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/llEggInventoryReductions_GeneralEggReport"
+                tools:listitem="@layout/date_quantity_layout" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white"
+    tools:context=".inventory.feed.addition.fragments.UpdateFeedInventoryAdditionForm">
+
+    <LinearLayout
+        android:id="@+id/llUpdateFeedInventoryAdditionHeader_UpdateFeedInventoryAdditionForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/ibBack_UpdateFeedInventoryAdditionForm"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="@color/green"
+            android:elevation="25dp"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/tvHeaderInfo_UpdateFeedInventoryAdditionForm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_weight="8"
+            android:background="@drawable/header_background"
+            android:elevation="25dp"
+            android:padding="5dp"
+            android:text="Add Feed Inventory"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/ibInfo_UpdateFeedInventoryAdditionForm"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="@color/green"
+            android:elevation="25dp"
+            android:src="@drawable/ic_information" />
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llUpdateFeedInventoryAdditionHeader_UpdateFeedInventoryAdditionForm">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:id="@+id/tvEnterDate_UpdateFeedInventoryAdditionForm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="16dp"
+                android:text="Enter the date"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/tvDatePicker_UpdateFeedInventoryAdditionForm"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvDatePicker_UpdateFeedInventoryAdditionForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/big_edit_text_background"
+                android:hint="Enter Date"
+                android:padding="5dp"
+                android:paddingStart="15dp"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvEnterDate_UpdateFeedInventoryAdditionForm" />
+
+
+            <TextView
+                android:id="@+id/tvSelectFeed_UpdateFeedInventoryAdditionForm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:drawableEnd="@drawable/ic_info"
+                android:text="Select the feed               "
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/llSelectFeed_UpdateFeedInventoryAdditionForm"
+                app:layout_constraintTop_toBottomOf="@id/tvDatePicker_UpdateFeedInventoryAdditionForm" />
+
+            <LinearLayout
+                android:id="@+id/llSelectFeed_UpdateFeedInventoryAdditionForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSelectFeed_UpdateFeedInventoryAdditionForm">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/spSelectFeed_UpdateFeedInventoryAdditionForm"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="7">
+
+                    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                        android:id="@+id/actvSelectFeed_UpdateFeedInventoryAdditionForm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/big_edit_text_background"
+                        android:inputType="text"
+                        android:paddingStart="15dp"
+                        android:paddingTop="1dp"
+                        android:paddingEnd="2dp"
+                        android:paddingBottom="2dp"
+                        android:textColor="@color/black"
+                        android:textSize="20sp">
+
+                        <requestFocus />
+                    </androidx.appcompat.widget.AppCompatAutoCompleteTextView>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/ivAddFeed_UpdateFeedInventoryAdditionForm"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:src="@drawable/add" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tvFeedQuantity_UpdateFeedInventoryAdditionForm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="Enter quantity of Feed acquired"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/etFeedQuantity_UpdateFeedInventoryAdditionForm"
+                app:layout_constraintTop_toBottomOf="@id/llSelectFeed_UpdateFeedInventoryAdditionForm" />
+
+
+            <EditText
+                android:id="@+id/etFeedQuantity_UpdateFeedInventoryAdditionForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/big_edit_text_background"
+                android:drawableEnd="@drawable/ic_info"
+                android:drawablePadding="2dp"
+                android:inputType="numberDecimal"
+                android:padding="5dp"
+                android:paddingStart="15dp"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvFeedQuantity_UpdateFeedInventoryAdditionForm" />
+
+            <TextView
+                android:id="@+id/tvFeedCost_UpdateFeedInventoryAdditionForm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="Enter cost of Feed acquired"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/etFeedCost_UpdateFeedInventoryAdditionForm"
+                app:layout_constraintTop_toBottomOf="@id/etFeedQuantity_UpdateFeedInventoryAdditionForm" />
+
+
+            <EditText
+                android:id="@+id/etFeedCost_UpdateFeedInventoryAdditionForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/big_edit_text_background"
+                android:drawableEnd="@drawable/ic_info"
+                android:drawablePadding="2dp"
+                android:inputType="numberDecimal"
+                android:padding="5dp"
+                android:paddingStart="15dp"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvFeedCost_UpdateFeedInventoryAdditionForm" />
+
+            <TextView
+                android:id="@+id/tvSelectFeedSource_UpdateFeedInventoryAdditionForm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:drawableEnd="@drawable/ic_info"
+                android:text="Enter source of Feed acquired             "
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/llSelectFeedSource_UpdateFeedInventoryAdditionForm"
+                app:layout_constraintTop_toBottomOf="@id/etFeedCost_UpdateFeedInventoryAdditionForm" />
+
+
+            <LinearLayout
+                android:id="@+id/llSelectFeedSource_UpdateFeedInventoryAdditionForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSelectFeedSource_UpdateFeedInventoryAdditionForm">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/spSelectFeedSource_UpdateFeedInventoryAdditionForm"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="7">
+
+                    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                        android:id="@+id/actvSelectFeedSource_UpdateFeedInventoryAdditionForm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/big_edit_text_background"
+                        android:inputType="text"
+                        android:paddingStart="15dp"
+                        android:paddingTop="1dp"
+                        android:paddingEnd="2dp"
+                        android:paddingBottom="2dp"
+                        android:textColor="@color/black"
+                        android:textSize="20sp">
+
+                        <requestFocus />
+                    </androidx.appcompat.widget.AppCompatAutoCompleteTextView>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/ivAddFeedSource_UpdateFeedInventoryAdditionForm"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:src="@drawable/add" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etShortNotes_UpdateFeedInventoryAdditionForm"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/big_edit_text_background"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="write short notes"
+                android:inputType="textMultiLine"
+                android:paddingStart="15dp"
+                android:paddingTop="10dp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/llSelectFeedSource_UpdateFeedInventoryAdditionForm" />
+
+
+            <Button
+                android:id="@+id/btnUpdate_UpdateFeedInventoryAdditionForm"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/big_button_background"
+                android:padding="0dp"
+                android:text="Update"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etShortNotes_UpdateFeedInventoryAdditionForm" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

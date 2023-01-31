@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item
+        android:id="@+id/dmHome"
+        android:icon="@drawable/ic_person"
+        android:title="Home" />
+    <item
+        android:id="@+id/dmPeople"
+        android:icon="@drawable/ic_person"
+        android:title="People" />
+
+    <item
+        android:id="@+id/dmUser"
+        android:icon="@drawable/ic_person"
+        android:title="User">
+        <menu>
+
+            <item
+                android:id="@+id/dmSetUp"
+                android:icon="@drawable/ic_person"
+                android:title="Set Up Farm" />
+            <item
+                android:id="@+id/dmSignUp"
+                android:icon="@drawable/ic_person"
+                android:title="SignUp" />
+            <item
+                android:id="@+id/dmBudget"
+                android:icon="@drawable/ic_person"
+                android:title="Login" />
+        </menu>
+    </item>
+
+
+    <item android:title="Farm Activities">
+        <menu>
+
+            <item
+                android:id="@+id/dmFeeding"
+                android:icon="@drawable/feed_inventory_reduction"
+                android:title="Feeding" />
+            <item
+                android:id="@+id/dmEggCollection"
+                android:icon="@drawable/feed_inventory_reduction"
+                android:title="Egg Collection" />
+            <item
+                android:id="@+id/dmOperatingExpenses"
+                android:icon="@drawable/operational_expenses"
+                android:title="Operating Expenses" />
+            <item
+                android:id="@+id/dmVaccination"
+                android:icon="@drawable/vaccination"
+                android:title="Vaccination" />
+        </menu>
+    </item>
+
+    <item android:title="Premium">
+        <menu>
+
+            <item
+                android:id="@+id/dmReport"
+                android:icon="@drawable/report"
+                android:title="View Reports" />
+            <item
+                android:id="@+id/dmFullFeatures"
+                android:icon="@drawable/feed_inventory_reduction"
+                android:title="Get Full Features" />
+            <item
+                android:id="@+id/dmSubscription"
+                android:icon="@drawable/operational_expenses"
+                android:title="View Subscription Plans" />
+        </menu>
+    </item>
+
+
+    <item android:title="Preferences">
+        <menu>
+            <item
+                android:id="@+id/dmSettings"
+                android:icon="@drawable/ic_settings"
+                android:title="Settings" />
+            <item
+                android:id="@+id/dmShare"
+                android:icon="@drawable/ic_share"
+                android:title="Share With Colleagues" />
+            <item
+                android:id="@+id/dmUserGuide"
+                android:icon="@drawable/ic_help"
+                android:title="User Guide" />
+            <item
+                android:id="@+id/dmHelp"
+                android:icon="@drawable/operational_expenses"
+                android:title="Help And Feedback" />
+
+            <item
+                android:id="@+id/dmPrivacy"
+                android:icon="@drawable/operational_expenses"
+                android:title="Privacy Policy" />
+
+            <item
+                android:id="@+id/dmLearn"
+                android:icon="@drawable/operational_expenses"
+                android:title="Learn More" />
+        </menu>
+    </item>
+    <item
+        android:id="@+id/dmLogOut"
+        android:icon="@drawable/ic_person"
+        android:title="LogOut" />
+
+</menu>

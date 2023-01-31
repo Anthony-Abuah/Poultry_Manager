@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="15dp"
+    app:cardBackgroundColor="@color/background_white"
+    android:layout_margin="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp">
+
+    <ImageView
+        android:id="@+id/ivFlockAdditionImage_FlockAdditionLayout"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/recycler_view_image"
+        android:elevation="5dp"
+        android:layout_marginStart="4dp"
+        android:src="@drawable/flock"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/tvFlockName_FlockAdditionLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:elevation="25dp"
+        android:text="January 2022 flock"
+        android:textColor="@color/main_green"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/ivFlockAdditionImage_FlockAdditionLayout"
+        app:layout_constraintTop_toBottomOf="@id/tvAdditionDate_FlockAdditionLayout" />
+
+    <TextView
+        android:id="@+id/tvAdditionDate_FlockAdditionLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:elevation="25dp"
+        android:text="Acquired on 22-10-2022"
+        android:textColor="@color/light_black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+    <TextView
+        android:id="@+id/tvFlockQuantity_FlockAdditionLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="8dp"
+        android:elevation="25dp"
+        android:text="500000 birds at 2 weeks old"
+        android:textColor="@color/light_black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/ivFlockAdditionImage_FlockAdditionLayout"
+        app:layout_constraintTop_toBottomOf="@id/tvFlockName_FlockAdditionLayout" />
+
+
+
+    <TextView
+        android:id="@+id/tvFlockCost_FlockAdditionLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="8dp"
+        android:elevation="25dp"
+        android:text="GHS 50,000.00"
+        android:textColor="@color/light_black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/ivFlockAdditionImage_FlockAdditionLayout"
+        app:layout_constraintTop_toBottomOf="@id/tvFlockQuantity_FlockAdditionLayout" />
+
+        <TextView
+            android:id="@+id/tvFlockAge_FlockAdditionLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="8dp"
+            android:elevation="25dp"
+            android:text="Age: 2 years, 3 months and 2 weeks"
+            android:textColor="@color/light_black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/ivFlockAdditionImage_FlockAdditionLayout"
+            app:layout_constraintTop_toBottomOf="@id/tvFlockCost_FlockAdditionLayout" />
+
+
+        <TextView
+        android:id="@+id/tvFlockPurpose_FlockAdditionLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="8dp"
+        android:elevation="25dp"
+        android:text="Purpose: Laying"
+        android:textColor="@color/light_black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/ivFlockAdditionImage_FlockAdditionLayout"
+        app:layout_constraintTop_toBottomOf="@id/tvFlockAge_FlockAdditionLayout" />
+
+
+    <TextView
+        android:id="@+id/tvFlockBreed_FlockAdditionLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="8dp"
+        android:elevation="25dp"
+        android:text="Breed: Red Comb"
+        android:textColor="@color/light_black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/ivFlockAdditionImage_FlockAdditionLayout"
+        app:layout_constraintTop_toBottomOf="@id/tvFlockPurpose_FlockAdditionLayout" />
+
+        <TextView
+        android:id="@+id/tvFlockSource_FlockAdditionLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="8dp"
+        android:elevation="25dp"
+        android:text="Purchased From Dedee Farms"
+        android:textColor="@color/light_black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/ivFlockAdditionImage_FlockAdditionLayout"
+        app:layout_constraintTop_toBottomOf="@id/tvFlockBreed_FlockAdditionLayout" />
+
+
+    <ImageView
+        android:id="@+id/ivUpdate_Delete_Menu_FlockAdditionLayout"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="5dp"
+        android:elevation="25dp"
+        android:src="@drawable/ic_more"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

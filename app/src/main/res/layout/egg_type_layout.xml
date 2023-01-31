@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="15dp"
+    app:cardBackgroundColor="@color/background_white"
+    android:layout_margin="8dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_margin="8dp">
+
+    <ImageView
+        android:id="@+id/ivEggTypeImage_EggTypeLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:elevation="25dp"
+        android:layout_weight="3"
+        android:src="@drawable/feed_inventory_reduction"/>
+
+    <TextView
+        android:id="@+id/tvEggTypeName_EggTypeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/main_green"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:elevation="25dp"
+        android:layout_weight="8"
+        android:padding="5dp"
+        android:gravity="start"
+        android:layout_gravity="center"
+        android:text="EggType Name"/>
+
+
+    <ImageView
+        android:id="@+id/ivUpdateDeleteMenu_EggTypeLayout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_weight="3"
+        android:src="@drawable/ic_more"/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
